@@ -4,6 +4,4 @@ def outer(func):
 	return inner
 def foo():
 	print('我是原始函数')
-outer(foo)
-outer(foo())
-outer('我是原始函数1')
+outer(foo)()
