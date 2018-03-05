@@ -5,7 +5,7 @@ class Animal(object):
 
 class Dog(Animal):
     def run(self):
-        print('Dog is running...')
+        print('Dog is running')
 		#pass
 	#def eat(self):
 		#print('Eating meat...')
