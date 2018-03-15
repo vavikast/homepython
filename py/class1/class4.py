@@ -1,15 +1,12 @@
 
-def wl(func):
-    def inner():
-        # 验证1
-        # 验证2
-        print('可以是吗')
-        return func()
-    return inner
- 
-@wl
-def f1():
-    print('This is no ')
+class  Student(object):
+	def __init__(self,name):
+		self.name=name
+	def __str__(self):
+		return 'Student object (name: %s)' % self.name
+	__repr__=__str__
+print(Student('Michael'))
+s=Student('Michael')
+s
+print(s)
 
-	
-f1()

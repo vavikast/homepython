@@ -1,15 +1,8 @@
+#! -*- coding: utf-8 -*-
+class Student(object):
+	def __init__(self,name)
+		self.name = name
+		
+s=Student('Bob')
+s.score=90
 
-def wl(func):
-    def inner():
-        # 验证1
-        # 验证2
-        print('可以是吗')
-        return func()
-    return inner
- 
-@wl
-def f1():
-    print('This is no ')
-
-	
-f1()

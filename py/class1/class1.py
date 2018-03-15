@@ -1,22 +1,22 @@
 #-*- coding: utf-8  -*-
 class Animal(object):
-	def run(self):	
-		print('Animal is runing:')
-
-class Dog(Animal):
-    def run(self):
-        print('Dog is running')
-		#pass
-	#def eat(self):
-		#print('Eating meat...')
-	#	pass
-class Cat(Animal):
+	pass
+class Mammal(Animal):
+	pass
+class Bird(Animal):
+	pass
+class Dog(Mammal):
+	pass
+class Bat(Mammal):
+	pass
+class Parrot(Bird):
+	pass
+class Ostrich(Bird):
+	pass
+class Runable(object):
 	def run(self):
-		print('Cating meat...')
-	#pass 
-
-dog=Dog()
-dog.run()
-cat=Cat()
-cat.run()
+		print('Running...')
+class Flyable(object):
+	def fly(self):
+		print('Flying...')
 
