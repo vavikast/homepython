@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-with open('e:\python\py\io\class10.jpg','rb') as f:
-	print(f.read())
+import subprocess
+print('$ nslookup www.python.org')
+r=subprocess.call(['nslookup','www.python.org'])
+print('Exit code:',r)
