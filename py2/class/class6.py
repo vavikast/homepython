@@ -1,9 +1,7 @@
 #-*- coding: utf-8  -*-
-class MyDog(object):
-	def __len__(self):
-		self.x=9
-	def power(self)
-		return self.x*self.x
-		
-obj=MyObject()
+def fn(self,name='world'):
+	print('Hello,%s,' %name)
+Hello=type('Hello',(object,),hello=fn)
+h=Hello()
+h.hello()
 

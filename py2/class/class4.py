@@ -1,17 +1,8 @@
-import functools
-def log(text):
-	def decorator(func):
-		@functools.wraps(func)
-		def wrapper(*args,**kw):
-			print('call %s():' % func.__name__)
-			return func(*args,**kw)
-		return wrapper
-	return decorator
-@log
-def now():
-	print('2015-3-25')
-@log('execute')
-def f():
-    pass
-f()
-print(f.__name__)
+#-*- coding: utf-8 -*-
+from enum import Enum
+
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+
+for name,member in Month.__members__.items():
+	print(name,'=>',member,',',member.value)
+Month.Jan
