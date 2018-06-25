@@ -1,8 +1,7 @@
 #-*- coding: utf-8  -*-
-class Student(object):
-	def __init__(self,name,age,score):
-		self.name=name
-		self.age=age
-		self.score=score
-s=Student('Bob',20,88)
-print(s())
+import re
+test=input()
+if re.match(r'\d{4}\-\w{3,7}',test):
+	print('ok')
+else:
+	print('failed')
