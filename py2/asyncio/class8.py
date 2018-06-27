@@ -1,12 +1,8 @@
 #! -*- coding: utf-8 -*-
-class A(object):
-	def run(self):
-		print("this class A")
-class B(A):
-	pass
-class C(B):
-	pass
-test_b=B()
-test_c=C()
-test_b.run()
-test_c.run()
+def gen():
+    for i in range(10):
+        x = yield i
+        print(x)
+g=gen()
+print(g.send(None))
+print(g.send(2))
