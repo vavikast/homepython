@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-
 #-*- coding: utf-8 -*-
-import doctest
-def ceshi(x):
-    """#这是文档测试的内容
-    >>> ceshi(2)
-    1
-    >>> ceshi(3)
-    0
-    """#End
-    if x%2==0:
-        return 1
-    else:
-        return 0
-if __name__ == "__main__":    doctest.testmod(verbose=True) 
-		
+
+import time, threading
+def loop():
+	print('thread %s is running...' %threading.current_thread().name)
+	n=0
+	while n<5:
+		n=n+1
+		print('thread %s >>> %s' %(threading.current_thread().name,n))
+		time.sleep(1)
+	print('thread %s ended.' % threading.current_thread().name)
+print('thread %s is running...' % threading.current_thread().name)
+t=threading.Thread(target=loop,name='LoopThread')
+t.start()
+t.join()
+print('thread %s ended.' % threading.current_thread().name)
