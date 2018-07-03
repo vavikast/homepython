@@ -1,11 +1,7 @@
 #-*- coding: utf-8  -*-
-def log(func):
-	def wrapper(*args,**kw):
-		print('call %s():' % func.__name__)
-		return func(*args,**kw)
-	return wrapper
-	
-@log
-def now():
-	print('2015-3-25')
-now()
+while True:
+	try:
+		x=int(input("Please enter a number:"))
+		break
+	except ValueError:
+		print("oops,that was no valid nuber.Please try again")
